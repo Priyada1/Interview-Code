@@ -8,16 +8,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
+
 /*
  *Practice Exercise 2
 Launch new Browser
-Open URL “http://toolsqa.wpengine.com/automation-practice-table/”
-Get the value from cell ‘Dubai’ with using dynamic xpath
-Print all the column values of row ‘Clock Tower Hotel’
+Open URL ï¿½http://toolsqa.wpengine.com/automation-practice-table/ï¿½
+Get the value from cell ï¿½Dubaiï¿½ with using dynamic xpath
+Print all the column values of row ï¿½Clock Tower Hotelï¿½
  */
 public class Practice_DynamicWebElement {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		
 		System.setProperty("webdriver.firefox.marionette", "G:/geckoDriver/geckodriver-v0.19.1-win64/geckodriver.exe");
@@ -57,12 +61,16 @@ public class Practice_DynamicWebElement {
 		System.out.println("Number of Links:"+size);
 		
 		
-		/*for(int i=0;i<size;i++)
+		for(int i=0;i<3;i++)
 		{
 			element.get(i).click();
+		  new WebDriverWait(driver,30).ignoring(ElementNotFoundException.class);
 			driver.navigate().back();
+			Thread.sleep(5000);
 		}
-		*/
+		
+		
+		driver.quit();
 		
 		
 		
