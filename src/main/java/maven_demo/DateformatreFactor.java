@@ -10,7 +10,11 @@ public class DateformatreFactor {
 		
 		String date="25/05/2018";
 		
+		
+		
 		Date d= new Date(date);
+		
+		
 		
 		SimpleDateFormat dft=new SimpleDateFormat("dd/MMMM/YYYY");
 		
@@ -25,7 +29,7 @@ public class DateformatreFactor {
 		   System.out.println(a);
 	   }
 	   
-	   
+	   System.out.println(java.time.LocalDate.now());  
 	   
 		
 		

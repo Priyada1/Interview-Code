@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- **********IMPORTANT**********To Generate HTML Extent Report always execute test cases from 
+TestNG XML file mandatory*******IMPORTANT********** -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suit name="Maven Demo Test">
+
+<test name="Maven Demo LoginTest">
+
+<parameter name="url" value="https://www.freecrm.com"/>
+<parameter name="username" value="naveenk"/>
+
+<classes>
+<class name="maven_demo.ParameterinTestNG"></class>
+</classes>
+
+
+</test>
+
+</suit>
+

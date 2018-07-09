@@ -1,0 +1,9 @@
+Feature: Free Crm Login feature
+Scenario: Free Crm Login Scenario
+
+Given User is already on Login page
+When Title of the Login Page is FreeCRM
+Then Enter UserName and Password
+And User clicks on the Login button
+
+

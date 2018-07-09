@@ -39,19 +39,26 @@ DupsWords();
 
 public static void DupsWords()
 {
-	String sample="i am in india india in";
+	String sample="i am in i i am india india in";
 	String s2[]=sample.split(" ");
-	int count=0;
+	int count=1;
 	
 	for (int i=0;i<s2.length;i++)
 	{
-		for(int j=0;j<s2.length;j++)
+		for(int j=i+1;j<s2.length;j++)
 		{
 			if(s2[i].equals(s2[j]))
 			{
 				count=count+1;
+				s2[j]="0";
 			}
+			System.out.println(s2[j]);
+			
+		
 		}
+		if(s2[i]!="0")
+		System.out.println("number repeated: "+s2[i]+" "+count+" times");
+		count=1;
 	}
 }
 
