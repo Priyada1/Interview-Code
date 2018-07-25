@@ -102,7 +102,19 @@
 			<version>1.0-beta</version>
 		</dependency>
 		
-
+       <!-- https://mvnrepository.com/artifact/net.sf.jxls/jxls-reader -->
+<dependency>
+    <groupId>net.sf.jxls</groupId>
+    <artifactId>jxls-reader</artifactId>
+    <version>1.0.2</version>
+</dependency>
+       <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+<dependency>
+    <groupId>net.sourceforge.jexcelapi</groupId>
+    <artifactId>jxl</artifactId>
+    <version>2.6.12</version>
+</dependency>
+       
 
 
 <dependency>
