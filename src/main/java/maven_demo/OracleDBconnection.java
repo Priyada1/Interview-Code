@@ -63,7 +63,7 @@ public class OracleDBconnection {
 		
 		String[] columns= {"Team", "Position"};
 		
-		Workbook wb=new XSSFWorkbook();
+		Workbook wb=new XSSFWorkbook();//Exporting/writing data to excel
 		
 		Sheet sh=wb.createSheet("IPLResult");
 		

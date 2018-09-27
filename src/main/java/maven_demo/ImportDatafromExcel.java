@@ -43,14 +43,19 @@ public class ImportDatafromExcel {
         
         int rowNum=sh.getRows();
         int colNum=sh.getColumns();
+        System.out.println(rowNum);
         
+        Object[][] data= new Object[rowNum][colNum];
         for(int i=1;i<rowNum;i++)
         {
         	for(int j=0;j<colNum;j++)
         	{
-        		System.out.print(sh.getCell(j, i).getContents()+"\t");
+        		//System.out.print(sh.getCell(j, i).getContents()+"\t");
+        		data[i][j]=sh.getCell(j, i).getContents();
+        		System.out.println(data[i][j]);
         	}
-        	System.out.println();
+        	//System.out.println();
+        	
         }
         
         

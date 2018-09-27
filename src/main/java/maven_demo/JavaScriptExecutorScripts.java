@@ -31,7 +31,7 @@ public class JavaScriptExecutorScripts
 	    //clickElementByJS(loginBtn, driver);
 	}
 	  public static void clickElementByJS(WebElement element, WebDriver driver){
-	    	JavascriptExecutor js = ((JavascriptExecutor) driver);
+	    	JavascriptExecutor js =  (JavascriptExecutor) driver;
 	    	js.executeScript("arguments[0].click();", element);
 	    	
 	    }

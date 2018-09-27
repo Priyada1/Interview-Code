@@ -33,7 +33,7 @@ System.out.println(sum);
 System.out.println(s1);
 System.out.println(" count of Dupliacte words in a sentence");
 DupsWords();
-
+DupChar();
 
 }
 
@@ -52,15 +52,73 @@ public static void DupsWords()
 				count=count+1;
 				s2[j]="0";
 			}
-			System.out.println(s2[j]);
+			//System.out.println(s2[j]);
 			
 		
-		}
+		} 
 		if(s2[i]!="0")
 		System.out.println("number repeated: "+s2[i]+" "+count+" times");
 		count=1;
 	}
 }
+
+
+
+public static void DupChar()
+{
+	int count =0 ;
+	String str ="gaurava";
+	char cp[] = str.toCharArray();
+	//System.out.println(str.length());
+	//System.out.println(str.charAt(0));
+	for(int i =0; i < cp.length;i++)
+	{
+		for(int j=i+1;j<cp.length;j++)
+		{
+			if(cp[i]==cp[j])
+			{
+				count++;
+				cp[j]='0';
+				
+			}
+
+			
+		}
+		if(cp[i]!='0')
+		{
+			System.out.println("number repeated: "+cp[i]+" "+count+" times");
+
+		}
+		
+		
+	
+	}
+	System.out.println(cp);
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

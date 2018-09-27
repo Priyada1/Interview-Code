@@ -1,10 +1,12 @@
 package maven_demo;
 
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -54,9 +56,23 @@ public class TooltipMessage {
 		driver.manage().deleteAllCookies();
 		
 		
+		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");//open new tab
+		driver.get("https://google.com/");
+		
+		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL+"w");//close the window
+		
+		Set<String> win= driver.getWindowHandles();
+		
+		for(String s:win)
+		{
+			System.out.println(s);
+			
+		}
+		
+		
 		//System.out.println("main frame name is: "+driver.switchTo().defaultContent());
 	
-		new WebDriverWait(driver,10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector(".demo-frame")));
+	new WebDriverWait(driver,10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector(".demo-frame")));
 		
 		
 		WebElement tooltips3=driver.findElement(By.cssSelector("a[title$='what this widget is']"));
@@ -66,6 +82,8 @@ public class TooltipMessage {
 		 WebElement age=driver.findElement(By.cssSelector("input#age"));
 		 System.out.println("age tooltip message is: "+age.getAttribute("title"));
 		 System.out.println("label name  is: "+age.getText());
+		 
+	
 		
 	}
 
